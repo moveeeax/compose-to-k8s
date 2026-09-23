@@ -1,0 +1,7 @@
+# Build output
+/compose-to-k8s
+/dist/
+/out/
+
+# Generated example manifests are checked in on purpose; ignore ad-hoc runs
+/tmp-manifests/
