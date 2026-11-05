@@ -89,3 +89,7 @@ go vet ./...
 ## License
 
 MIT — see [LICENSE](LICENSE).
+
+---
+
+**Archived on 2026-11-05.** the README's premise that kompose is "effectively unmaintained" no longer holds (kubernetes/kompose v1.38.0, Jan 2026), and kompose already covers probes, PVCs, service types and Ingress via labels; this ~600-line converter handles image/ports/env/command/volumes only. Keep only if the "clean output + honest warnings, no kompose labels" angle is pursued with the features below.
