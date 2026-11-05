@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"sort"
 
-	"gopkg.in/yaml.v3"
+	"go.yaml.in/yaml/v3"
 )
 
 // Compose is the subset of the compose spec we understand.
