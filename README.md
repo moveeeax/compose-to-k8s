@@ -1,6 +1,7 @@
 # compose-to-k8s
 
 [![CI](https://github.com/moveeeax/compose-to-k8s/actions/workflows/ci.yml/badge.svg)](https://github.com/moveeeax/compose-to-k8s/actions/workflows/ci.yml)
+[![Go](https://img.shields.io/github/go-mod/go-version/moveeeax/compose-to-k8s)](go.mod)
 [![Go Reference](https://pkg.go.dev/badge/github.com/moveeeax/compose-to-k8s.svg)](https://pkg.go.dev/github.com/moveeeax/compose-to-k8s)
 [![Go Report Card](https://goreportcard.com/badge/github.com/moveeeax/compose-to-k8s)](https://goreportcard.com/report/github.com/moveeeax/compose-to-k8s)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -28,6 +29,8 @@ rather than silently wrong YAML. Output ordering and label sets are
 deterministic, so re-running produces a clean diff.
 
 ## Install
+
+Requires Go 1.26 or newer (CI tests Go 1.26 and 1.27).
 
 ```sh
 go install github.com/moveeeax/compose-to-k8s/cmd/compose-to-k8s@latest
@@ -79,7 +82,7 @@ The generated manifests pass `kubeconform -strict` and apply cleanly with
 ## Development
 
 ```sh
-go test ./...        # unit tests, including the web+redis acceptance case
+go test -race ./...  # unit tests, including the web+redis acceptance case
 go vet ./...
 ```
 
